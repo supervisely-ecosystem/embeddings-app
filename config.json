@@ -4,7 +4,7 @@
   "name": "Explore data with embeddings",
   "description": "Calculate and visualize embeddings",
   "entrypoint": "python -m uvicorn src.main:app --host 0.0.0.0 --port 8000",
-  "docker_image": "supervisely/embeddings_app:1.0.8",
+  "docker_image": "supervisely/embeddings_app:6.73.571",
   "port": 8000,
   "icon": "https://user-images.githubusercontent.com/115161827/211832834-eef9325d-9e00-4499-ae42-2e7ee3d97f1a.png",
   "icon_cover": true,
@@ -26,7 +26,7 @@
     "target": ["images_project", "images_dataset"],
     "context_category": "Metric Learning"
   },
-  "instance_version": "6.12.30",
+  "instance_version": "6.15.60",
   "need_gpu": false,
   "gpu": "preferred",
   "community_agent": false

@@ -164,7 +164,7 @@ if __name__ == "__main__":
         api.file.download(team_id, "/" + save_paths["embeddings"], save_paths["embeddings"])
         with open(save_paths["info"], "r") as f:
             info_old = json.load(f)
-        embeddings = torch.load(save_paths["embeddings"])
+        embeddings = torch.load(save_paths["embeddings"], weights_only=False)
         print("embeddings loaded. n =", len(embeddings))
     else:
         info_old = {

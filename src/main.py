@@ -535,7 +535,7 @@ def run():
         info_run.description += "found existing projections<br>"
         sly.logger.info("downloading projections...")
         api.file.download(team_id, "/" + save_paths["projections"], save_paths["projections"])
-        projections = torch.load(save_paths["projections"])
+        projections = torch.load(save_paths["projections"], weights_only=False)
     else:
         info_run.description += "Calculating projections...<br>"
         sly.logger.info("calculating projections...")

@@ -18,7 +18,7 @@
     "target": ["images_project", "images_dataset"],
     "context_category": "Metric Learning"
   },
-  "min_instance_version": "6.5.22",
+  "min_instance_version": "6.15.60",
   "release": { "version":"v1.0.81", "name":"release" },
   "slug": "poldersen2/calculate-embeddings"
 }

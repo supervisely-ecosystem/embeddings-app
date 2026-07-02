@@ -83,7 +83,7 @@ if api.file.exists(team_id, "/" + save_paths["info"]):
         all_info = json.load(f)
     with open(save_paths["cfg"], "r") as f:
         cfg = json.load(f)
-    embeddings = torch.load(save_paths["embeddings"])
+    embeddings = torch.load(save_paths["embeddings"], weights_only=False)
     print("embeddings loaded. n =", len(embeddings))
 else:
     raise FileNotFoundError("/" + save_paths["info"])
@@ -92,7 +92,7 @@ all_info_list = [dict(tuple(zip(all_info.keys(), vals))) for vals in zip(*list(a
 
 if api.file.exists(team_id, "/" + save_paths["projections"]) and not force_recalculate:
     api.file.download(team_id, "/" + save_paths["projections"], save_paths["projections"])
-    projections = torch.load(save_paths["projections"])
+    projections = torch.load(save_paths["projections"], weights_only=False)
 else:
     print("calculating projections...")
     projections = calculate_projections(

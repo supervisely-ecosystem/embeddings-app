@@ -62,7 +62,7 @@ def download_embeddings(api, path_prefix, save_paths, team_id):
         all_info = json.load(f)
     with open(save_paths["cfg"], "r") as f:
         cfg = json.load(f)
-    embeddings = torch.load(save_paths["embeddings"])
+    embeddings = torch.load(save_paths["embeddings"], weights_only=False)
     return embeddings, all_info, cfg
 
 

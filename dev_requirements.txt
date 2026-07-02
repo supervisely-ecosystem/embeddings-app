@@ -3,13 +3,8 @@
 supervisely==6.73.571
 transformers==4.57.6
 timm==1.0.27
-# Linux image uses CUDA 12.8 wheels. Local macOS development resolves the host wheels.
-torch==2.9.1+cu128 ; platform_system == "Linux"
-torchvision==0.24.1+cu128 ; platform_system == "Linux"
-torch ; platform_system == "Darwin"
-torchvision ; platform_system == "Darwin"
+torch==2.9.1+cu128
+torchvision==0.24.1+cu128
 scikit-learn==1.9.0
 # umap-learn depends on numba, which currently blocks Python 3.14, so the image uses Python 3.12.
 umap-learn==0.5.12
-# Supervisely Bokeh widget validates this exact version at runtime.
-bokeh==3.1.1
